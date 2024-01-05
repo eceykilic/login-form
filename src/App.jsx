@@ -132,6 +132,7 @@ export default function Login() {
             type="checkbox"
             onChange={handleChange}
             invalid={errors.terms}
+            data-cy="terms"
           />{' '}
           <Label htmlFor="terms" check>
             I agree to terms of service and privacy policy
