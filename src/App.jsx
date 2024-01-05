@@ -93,53 +93,55 @@ export default function Login() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <FormGroup>
-        <Label for="exampleEmail">Email</Label>
-        <Input
-          id="exampleEmail"
-          name="email"
-          placeholder="Enter your email"
-          type="email"
-          onChange={handleChange}
-          invalid={errors.email}
-          value={form.email}
-        />
-        {errors.email && <FormFeedback>{errorMessages.email}</FormFeedback>}
-      </FormGroup>
-      <FormGroup>
-        <Label for="examplePassword">Password</Label>
-        <Input
-          id="examplePassword"
-          name="password"
-          placeholder="Enter your password "
-          type="password"
-          onChange={handleChange}
-          invalid={errors.password}
-          value={form.password}
-        />
-        {errors.password && (
-          <FormFeedback>{errorMessages.password}</FormFeedback>
-        )}
-      </FormGroup>
-      <FormGroup check>
-        <Input
-          id="terms"
-          name="terms"
-          checked={form.terms}
-          type="checkbox"
-          onChange={handleChange}
-          invalid={errors.terms}
-        />{' '}
-        <Label htmlFor="terms" check>
-          I agree to terms of service and privacy policy
-        </Label>
-      </FormGroup>
-      <FormGroup className="text-center p-4">
-        <Button disabled={!isValid} color="primary">
-          Sign In
-        </Button>
-      </FormGroup>
-    </Form>
+    <div className="App">
+      <h1>Cypress Login</h1>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <Label for="exampleEmail">Email</Label>
+          <Input
+            id="exampleEmail"
+            name="email"
+            placeholder="Enter your email"
+            type="email"
+            onChange={handleChange}
+            invalid={errors.email}
+            value={form.email}
+          />
+          {errors.email && <FormFeedback>{errorMessages.email}</FormFeedback>}
+        </FormGroup>
+        <FormGroup>
+          <Label for="examplePassword">Password</Label>
+          <Input
+            id="examplePassword"
+            name="password"
+            placeholder="Enter your password "
+            type="password"
+            onChange={handleChange}
+            invalid={errors.password}
+            value={form.password}
+          />
+          {errors.password && (
+            <FormFeedback>{errorMessages.password}</FormFeedback>
+          )}
+        </FormGroup>
+        <FormGroup check>
+          <Input
+            id="terms"
+            name="terms"
+            checked={form.terms}
+            type="checkbox"
+            onChange={handleChange}
+            invalid={errors.terms}
+          />{' '}
+          <Label htmlFor="terms" check>
+            I agree to terms of service and privacy policy
+          </Label>
+        </FormGroup>
+        <FormGroup className="text-center p-4">
+          <Button disabled={!isValid} color="primary">
+            Sign In
+          </Button>
+        </FormGroup>
+      </Form></div>
   );
 }
